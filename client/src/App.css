@@ -1,0 +1,248 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #f6fafc;
+  font-family: "Lato", sans-serif;
+  line-height: 1;
+  font-weight: 400;
+}
+
+.header {
+  height: 8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  background-color: #505ef4;
+}
+
+.header-icon {
+  width: 3.2rem;
+  height: 4.8rem;
+  color: #fff;
+}
+
+.logo-text {
+  font-size: 2.4rem;
+  color: #fff;
+  font-weight: 700;
+}
+
+/*Gallery Section */
+.section-gallery {
+  margin: 8rem 0;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 120rem;
+  padding: 0 3.2rem;
+  display: grid;
+  grid-template-columns: 65fr 35fr;
+  grid-column-gap: 6.4rem;
+  align-items: start;
+}
+
+.photos {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-row-gap: 9.6rem;
+  grid-column-gap: 6.4rem;
+  align-items: center;
+}
+
+.card {
+  box-shadow: 0 2.4rem 4.8rem 0 rgba(0, 0, 0, 0.075);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+
+.update-menu {
+  top: 0;
+  right: 0;
+  position: absolute;
+}
+
+.card-img {
+  display: block;
+  width: 100%;
+  height: 300px;
+  transition: all 0.4s;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 2.4rem;
+}
+
+.tag {
+  color: #868e96;
+  display: inline-block;
+  margin-bottom: 0.8rem;
+  font-size: 1.2rem;
+}
+
+.card-title {
+  font-size: 2.4rem;
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 1.6rem;
+}
+
+.card-description {
+  font-size: 2rem;
+  line-height: 1.6;
+  margin-bottom: 3.2rem;
+}
+
+.card-icons {
+  justify-self: flex-end;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.like,
+.delete,
+.update {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.2rem;
+}
+
+.like-button,
+.delete-button,
+.update-button {
+  outline: none;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+.card-icon {
+  height: 2.4rem;
+  width: 2.4rem;
+}
+
+.card-icon-text {
+  font-size: 1.8rem;
+  color: #495057;
+}
+
+.card-icon-like {
+  color: #505ef4;
+}
+
+.card-icon-delete {
+  color: #fa5252;
+}
+
+.card-icon-update {
+  color: #f49f50;
+}
+
+/*Form*/
+
+.form {
+  padding: 3.2rem;
+  background-color: #f8f9fa;
+  color: #13323c;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.secondary-heading {
+  display: inline-block;
+  font-weight: 700;
+  font-size: 2rem;
+  margin-bottom: 2.4rem;
+  letter-spacing: 1px;
+  color: #505ef4;
+}
+
+.cta-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.cta-form label {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+}
+
+.cta-form input {
+  width: 100%;
+  padding: 1.2rem;
+  font-size: 1.8rem;
+  font-family: inherit;
+  background-color: #fff;
+  border-radius: 9px;
+  border: none;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  color: inherit;
+}
+
+input[type="file"] {
+  background: #f8f9fa;
+  box-shadow: none;
+}
+
+input[type="file"]::file-selector-button {
+  padding: 0.8rem 1.6rem;
+  border-radius: 0rem;
+  background-color: #505ef4;
+  transition: 0.3s;
+  font-family: inherit;
+  color: #fff;
+  border: none;
+}
+
+input[type="file"]::file-selector-button:hover {
+  background-color: #737ef6;
+  cursor: pointer;
+}
+
+.btn-submit {
+  border: none;
+  background-color: #f49f50;
+  padding: 1.4rem 2.8rem;
+  border-radius: 1rem;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 700;
+  font-family: inherit;
+}
+
+.pointer-arrow {
+  text-decoration: none;
+  position: absolute;
+  right: 0;
+}
+.pointer-img {
+  width: 6.4rem;
+  height: 9.6rem;
+  border-radius: 50%;
+}
+@media (max-width: 1191px) {
+  .container {
+    padding: 0 12.8rem;
+    grid-template-columns: 1fr;
+    grid-row-gap: 6.4rem;
+  }
+}
