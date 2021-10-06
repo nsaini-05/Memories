@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-import useStyles from "./style";
-import FileBase from "react-file-base64";
 import { useDispatch, useSelector } from "react-redux";
 import { createPost, updatePost } from "../../actions/posts";
+import $ from 'jquery';
+
 
 const Form = ({ currentId, setCurrentId }) => {
   const post = useSelector((state) =>
@@ -29,6 +29,8 @@ const Form = ({ currentId, setCurrentId }) => {
   }, [post]);
 
   const clear = () => {
+    $("#file").val(null);
+
     setCurrentId(0);
     setPostData({
       creator: "",
@@ -130,6 +132,7 @@ const Form = ({ currentId, setCurrentId }) => {
             name="image"
             onChange={onChange}
             accept="image/png, image/gif, image/jpeg"
+            required
           />
         </div>
 

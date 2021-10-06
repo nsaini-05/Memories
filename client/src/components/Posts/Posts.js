@@ -13,14 +13,20 @@ const Grid = styled.div`
   grid-template-columns: repeat(2, 1fr);
 `;
 
+
+
+
 const Posts = ({ setCurrentId }) => {
+
+
   const dispatch = useDispatch();
   const posts = useSelector((state) => state.posts);
 
   useEffect(() => {
     dispatch(getPosts());
-  }, []);
+  }, [dispatch]);
 
+  
   return posts ? (
     <div className="photos">
       {posts.map((post) => (

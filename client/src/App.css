@@ -44,7 +44,7 @@ body {
 .container {
   margin: 0 auto;
   max-width: 120rem;
-  padding: 0 3.2rem;
+  padding: 0 3rem;
   display: grid;
   grid-template-columns: 65fr 35fr;
   grid-column-gap: 6.4rem;
